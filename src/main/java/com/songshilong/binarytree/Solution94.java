@@ -6,7 +6,7 @@ import java.util.List;
 public class Solution94 {
 
     /**
-     * 94. 二叉树的中序遍历--迭代法
+     * 94. 二叉树的中序遍历--递归法
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();

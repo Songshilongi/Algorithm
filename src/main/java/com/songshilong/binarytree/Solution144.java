@@ -7,7 +7,7 @@ public class Solution144 {
 
 
     /**
-     * 迭代法
+     * 递归法
      */
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();

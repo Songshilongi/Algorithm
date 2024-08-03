@@ -6,7 +6,7 @@ import java.util.List;
 public class Solution145 {
 
     /**
-     * 145. 二叉树的后序遍历--迭代法
+     * 145. 二叉树的后序遍历--递归法
      */
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
