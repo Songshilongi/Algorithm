@@ -2,6 +2,7 @@ package com.songshilong.binarytree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Solution94 {
 
@@ -22,6 +23,33 @@ public class Solution94 {
         back(left, result);
         result.add(root.val);
         back(right, result);
+    }
+
+    /**
+     * 迭代法
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversalIteration(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) return result;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.peek();
+            if (node != null) {
+                stack.pop();
+                if (node.right != null) stack.push(node.right);
+                stack.push(node);
+                stack.push(null);
+                if (node.left != null) stack.push(node.left);
+            }else {
+                stack.pop();
+                node = stack.pop();
+                result.add(node.val);
+            }
+        }
+        return result;
     }
 
 
