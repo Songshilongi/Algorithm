@@ -24,6 +24,4 @@ public class Solution513 {
         }
         return result;
     }
-
-
 }
