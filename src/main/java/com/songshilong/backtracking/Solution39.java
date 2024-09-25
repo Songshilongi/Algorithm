@@ -23,6 +23,12 @@ public class Solution39 {
         return result;
     }
 
+    /**
+     * 回溯过程
+     * @param candidates 无重复元素的数组
+     * @param target 目标整数
+     * @param index 数组的起始索引位置
+     */
     public void backTracking(int[] candidates, int target, int index) {
         if (sum == target) {
             result.add(new ArrayList<>(list));
