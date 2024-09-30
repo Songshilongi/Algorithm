@@ -2,6 +2,7 @@ package com.songshilong.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -12,6 +13,7 @@ public class Solution332 {
     List<String> list = new ArrayList<>();
     List<List<String>> result = new ArrayList<>();
     public  List<String> findItinerary(List<List<String>> tickets) {
+        tickets.sort((a, b) -> a.getLast().compareTo(b.getLast()));
         backTracking(tickets, new int[tickets.size()], "", "JFK");
         return result.getFirst();
     }
