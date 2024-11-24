@@ -13,6 +13,9 @@ public class Solution516 {
     public int longestPalindromeSubseq(String s) {
         char[] row = s.toCharArray();
         int len = row.length;
+        /*
+        dp[i][j] 代表 row在区间范围[i, j]内的最长回文子序列的大小
+         */
         int[][] dp = new int[len][len];
 
         for (int i = len - 1; i>=0; i--) {
